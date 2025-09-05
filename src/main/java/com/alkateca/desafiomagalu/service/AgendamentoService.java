@@ -24,6 +24,8 @@ public class AgendamentoService {
                 .dataHoraEnvio(LocalDateTime.now())
                 .build();
 
+        Agendamento agendamentoSalvo = agendamentoRepository.save(agendamento);
+
         return toResponse(agendamento);
     }
 

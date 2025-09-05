@@ -2,10 +2,7 @@ package com.alkateca.desafiomagalu.model;
 
 import com.alkateca.desafiomagalu.enums.TipoComunicacao;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -14,6 +11,7 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Agendamento {
 
     @Id
@@ -29,4 +27,7 @@ public class Agendamento {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private TipoComunicacao tipoComunicacao;
+
+    @Column(nullable = false)
+    private String mensagem;
 }
