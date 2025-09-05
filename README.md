@@ -1,8 +1,12 @@
 # desafioMagalu
 Agendador de Comunicações:
-API REST desenvolvida como base no desafio técnico [(enunciado)](https://github.com/alkateca/desafioMagalu/blob/main/enunciado.md) da vaga de desenvolvedor backend da Magalu, focada no agendamento de envio de comunicações para clientes. O sistema permite agendar, consultar e cancelar o envio de mensagens por diferentes canais como E-mail, SMS, Push e WhatsApp.
+
+API REST desenvolvida com base no desafio técnico [(enunciado)](https://github.com/alkateca/desafioMagalu/blob/main/enunciado.md) da vaga de desenvolvedor backend da Magalu, focada no envio de comunicações para clientes. 
+
+O sistema permite agendar, consultar e cancelar o envio de mensagens por diferentes canais como E-mail, SMS, Push e WhatsApp.
 
 ✨ Funcionalidades
+
 Agendamento de novas comunicações com data e hora futuras.
 
 Consulta do status de um agendamento específico pelo seu ID.
@@ -10,6 +14,7 @@ Consulta do status de um agendamento específico pelo seu ID.
 Cancelamento de um agendamento existente.
 
 🚀 Tecnologias Utilizadas
+
 Java 17
 
 Spring Boot
@@ -23,6 +28,7 @@ Docker & Docker Compose
 MySQL
 
 🛠️ Como Executar o Projeto
+
 Pré-requisitos
 Java JDK 24 ou superior.
 
@@ -30,25 +36,22 @@ Apache Maven 3.8 ou superior.
 
 Docker e Docker Compose instalados e em execução.
 
-Configuração e Execução
-O projeto é configurado para se conectar a uma instância do MySQL gerenciada pelo Docker Compose, simplificando o setup do ambiente.
+# Configuração e Execução
+
+O projeto é configurado para se conectar a uma instância do MySQL gerenciada pelo Docker Compose.
 
 Clone o repositório:
 
 git clone [https://github.com/alkateca/desafioMagalu.git](https://github.com/alkateca/desafioMagalu.git)
 
-Navegue até a pasta do projeto:
-
 cd desafioMagalu
 
-Inicie o banco de dados com Docker Compose:
-Este comando irá baixar a imagem do MySQL (se necessário) e iniciar um contêiner em segundo plano.
+cd docker
 
 docker-compose up -d
 
-Aguarde alguns segundos para o banco de dados estar totalmente operacional.
-
 Verifique a configuração da aplicação:
+
 O arquivo src/main/resources/application.properties já deve estar configurado para se conectar ao contêiner Docker. As credenciais (username, password, url) devem corresponder às definidas no arquivo docker-compose.yml.
 
 Execute a aplicação Spring Boot:
@@ -57,17 +60,8 @@ mvn spring-boot:run
 
 Pronto! A API estará disponível em http://localhost:8080.
 
-Parando o Contêiner
-Para parar o contêiner do banco de dados quando terminar de usar, execute na raiz do projeto:
 
-docker-compose down
-
-🧪 Como Executar os Testes
-Para rodar os testes de unidade e garantir que a lógica de negócio está funcionando corretamente, execute o comando:
-
-mvn test
-
-API Endpoints
+# API Endpoints
 1. Agendar Comunicação
 POST /api/agendamentos
 
