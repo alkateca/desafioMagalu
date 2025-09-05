@@ -1,5 +1,5 @@
 # desafioMagalu
-Desafio Magalu - Agendador de Comunicações
+Agendador de Comunicações:
 API REST desenvolvida como base no desafio técnico [(enunciado)](https://github.com/alkateca/desafioMagalu/blob/main/enunciado.md) da vaga de desenvolvedor backend da Magalu, focada no agendamento de envio de comunicações para clientes. O sistema permite agendar, consultar e cancelar o envio de mensagens por diferentes canais como E-mail, SMS, Push e WhatsApp.
 
 ✨ Funcionalidades
